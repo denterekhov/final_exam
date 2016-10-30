@@ -1,0 +1,409 @@
+$font-stack1: 'Montserrat', Arial, sans-serif;
+$font-stack2: 'Roboto', Arial, sans-serif;
+$color1:      #333;
+$color2:      #ff4e50;
+$color3:      #fff;
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.clearfix:after {
+  content:'';
+  clear: both;
+  display: block;
+}
+
+
+/*SLIDERS BLOCK*/
+.block_title {
+  text-align: center;
+  color: $color1;
+  font-family: $font-stack1;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.slide_title {
+  @extend .block_title;
+  margin: 40px 0 20px;
+}
+
+.slick-item {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  padding: 0px;
+  margin: 0px;
+  margin: 10px 0;
+  button {
+    position: absolute;
+    border: 0;
+    background-color: transparent;
+    font-size: 0;
+  }
+}
+
+.first_slide,
+.second_slide,
+.third_slide {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  border-radius: 10px;
+}
+
+.first_slide {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, transparent 100%), url('../img/step-1.jpg') center center;
+}
+.second_slide {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, transparent 100%), url('../img/step-2.jpg') center center;
+}
+.third_slide {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, transparent 100%), url('../img/step-3.jpg') center center;
+}
+
+.slide_legend {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+
+}
+.slide_legend_step {
+  width: 70px;
+  height: 20px;
+  background-color: $color2;
+  border-radius: 10px;
+  color: $color3;
+  text-align: center;
+  line-height: 20px;
+  font-family: $font-stack1;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.slide_legend_title {
+  padding: 15px 0px;
+  color: $color3;
+  font-family: $font-stack1;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.slide_legend_text {
+  color: #ccc;
+  font-family: $font-stack2;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 300;
+}
+
+/*PARTNERS BLOCK*/
+.partners_title{
+  @extend .block_title;
+  padding: 0 15px;
+  margin: 40px 0 20px;
+}
+
+.partner_1,
+.partner_2,
+.partner_3,
+.partner_4 {
+  margin-bottom: 34px;
+  a {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    height: 122px;
+    width: 122px;
+    border-radius: 50%;
+    &:hover {
+      filter: drop-shadow(0px 0px 10px #000);
+      transform: scale(1.05);
+      transition: all 0.2s linear;
+    }
+    span {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+.partner_1 a {
+  background: #fbfbfb url(../img/photo-1.jpg) 0 0 no-repeat;
+  span {
+    background: url(../sprite/sprite.png) 0 -40px no-repeat;
+  }
+}
+
+.partner_2 a {
+  background: #fbfbfb url(../img/photo-2.jpg) 0 0 no-repeat;
+  span {
+    background: url(../sprite/sprite.png) -40px -40px no-repeat;
+  }
+}
+
+.partner_3 a {
+  background: #fbfbfb url(../img/photo-3.jpg) 0 0 no-repeat;
+  span {
+    background: url(../sprite/sprite.png) 0 0 no-repeat;
+  }
+}
+
+.partner_4 a {
+  background: #fbfbfb url(../img/photo-4.jpg) 0 0 no-repeat;
+  span {
+    background: url(../sprite/sprite.png) -40px 0 no-repeat;
+  }
+}
+
+.partner_name {
+  margin: 20px 0px;
+  color: $color1;
+  font-family: $font-stack1;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.partner_passion {
+  padding: 0 40px;
+  color: #666;
+  font-family: $font-stack2;
+  font-size: 14px;
+  text-align: center;
+}
+
+.see_partners {
+  margin-top: 30px;
+  &_link {
+    margin: 0 auto;
+    display: block;
+    width: 280px;
+    height: 40px;
+    border: 2px solid $color2;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 38px;
+    color: $color2;
+    font-family: $font-stack1;
+    font-size: 14px;
+    font-weight: 700;
+    &:hover{
+      color: $color3;
+      background-color: $color2;
+    };
+  }
+}
+
+/*MASONRY BLOCK*/
+.holiday_ideas_title {
+  @extend .block_title;
+  margin: 40px 0 20px;
+}
+
+/*Masonry options*/
+.grid-item {
+  height: 120px;
+  margin: 0 0 10px;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 10px;
+}
+
+.grid-sizer,
+.grid-item {
+  width: 100%;
+}
+
+.grid-item_title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: $color3;
+  font-family: $font-stack1;
+  font-size: 22px;
+  font-weight: 700;
+  text-shadow: 0 0 2px black;
+}
+
+/*SEARCH BLOCK*/
+.discover_ideas_title {
+  @extend .block_title;
+  margin: 40px 0 20px;
+}
+
+.discover_ideas_text {
+  text-align: center;
+  color: $color1;
+  font-family: $font-stack2;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.discover_ideas {
+  width: 100%;
+  input[type="text"] {
+    margin: 10px auto;
+    display: block;
+    width: 280px;
+    height: 40px;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 1px 0 #eee;
+    color: #999;
+    font-family: $font-stack2;
+    font-size: 14px;
+    font-weight: 300;
+  }
+  input[type="submit"] {
+    margin: 0 auto;
+    display: block;
+    width: 280px;
+    height: 40px;
+    margin-bottom: 40px;
+    background-color: $color2;
+    border: none;
+    border-radius: 20px;
+    color: $color3;
+    font-family: $font-stack1;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+}
+
+.red_line {
+  width: 100%;
+  height: 4px;
+  background-color: $color2;
+}
+
+@media (min-width: 768px) {
+  .slick-item button {
+    top: 10%;
+    width: 30px;
+    height: 55px;
+    opacity: 0.5;
+    z-index: 2;
+  }
+
+  .slick-prev {
+    left: 10px;
+    background: url(../sprite/sprite_2.png) 0 0 no-repeat;
+    &:hover{
+      opacity: 1;
+    }   
+  }
+
+  .slick-next{
+    right: 10px;
+    background: url(../sprite/sprite_2.png) -30px 0 no-repeat;
+    &:hover{
+      opacity: 1;
+    }
+  }
+
+  .slide_title,
+  .partners_title,
+  .holiday_ideas_title,
+  .discover_ideas_title {
+    margin: 91px 0 26px;
+  }
+
+  .slick-item,
+  .first_slide,
+  .second_slide,
+  .third_slide {
+    height: 400px;
+  }
+
+  .partner_name {
+    margin: 12px 0px;
+  }
+
+  .partner_passion {
+    padding: 0 73px;
+    line-height: 17px;
+  }
+
+  .see_partners {
+    margin: 0;
+    &_link {
+      width: 195px;
+    }
+  }
+
+  .grid-item {
+    height: 310px;
+    margin: 0 0 20px 0;
+  }
+  
+  .grid-sizer,
+  .grid-item {
+    width: 31.59%;
+  }
+
+  .gutter-sizer {
+    width: 2.6%;
+  }
+
+  .grid-item--width2 {
+    width: 65.8%; 
+  }
+
+  .discover_ideas {
+    text-align: center;
+    form {
+      height: 180px;
+      padding-top: 40px;
+    }
+    input[type="text"] {
+      margin: 0;
+      display: inline-block;
+      width: 235px;
+    }
+    input[type="submit"] {
+      margin: 0;
+      width: 160px;
+      display: inline-block;
+      &:hover {
+        border: 2px solid $color2;
+        background-color: $color3;
+        color: $color2;
+      }
+    }
+  } 
+}
+
+@media (min-width: 940px) {
+  .partner_name {
+    margin: 21px 0px 13px;
+  }
+  .partner_passion {
+    padding: 0 9px;
+  }
+
+  .slick-item button {
+    top: 40%;
+  }
+}
+
+@import "header";
+@import "footer";
+@import "grid";

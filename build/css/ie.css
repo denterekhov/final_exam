@@ -1,0 +1,39 @@
+.first_slide {
+  background-image: url('../img/step-1.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.second_slide {
+  background-image: url('../img/step-2.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.third_slide {
+  background-image: url('../img/step-3.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+
+.grid-item {
+  background-repeat: no-repeat;
+}
+
+.grid-item_title {
+  position: static;
+}
+
+@media (min-width: 768px) {
+  .grid-sizer,
+  .grid-item {
+    width: 32%;
+  }
+
+  .gutter-sizer {
+    width: 1.5%;
+  }
+
+  .grid-item--width2 {
+    width: 65%; 
+  }
+}
